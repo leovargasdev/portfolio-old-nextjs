@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(287.69deg, #16161A 1.02%, rgba(29, 29, 52, 0.94) 87.35%);
+
+  display: flex;
+}
+
+.header {
+  height: 100%;
+
+  background: #1A1A2E;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 12px;
+
+  strong {
+    color: #fff;
+    font-size: 3rem;
+  }
+}
+
+.main {
+  flex: 1;
+  height: 100vh;
+  overflow-y: scroll;
+
+  font-size: 3rem;
+  color: #fff;
+  position: relative;
+
+  display: flex;
+
+  span {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: crimson;
+  }
+}
