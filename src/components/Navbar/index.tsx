@@ -1,39 +1,38 @@
-import { FaEnvelope, FaFolder, FaHome, FaUser } from 'react-icons/fa'
-import { BsFillChatQuoteFill } from 'react-icons/bs'
-
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { HiHome, HiFolderOpen, HiChatAlt2, HiUserCircle } from 'react-icons/hi'
 
 import styles from './styles.module.scss'
 
-export const Navbar = () => (
-  <nav className={styles.navigation}>
-    <ul>
-      {/* active */}
-      <li className={`${styles.list} ${styles.active}`} data-color="#f53b57">
-        <a href="">
-          <HiHome size={24} />
-          <span className={styles.title}>Home</span>
-        </a>
-      </li>
-      <li className={styles.list} data-color="#3c40c6">
-        <a href="">
-          <HiUserCircle size={24} />
-          <span className={styles.title}>Sobre</span>
-        </a>
-      </li>
-      <li className={styles.list} data-color="#05c46b">
-        <a href="">
-          <HiFolderOpen size={24} />
-          <span className={styles.title}>Projetos</span>
-        </a>
-      </li>
-      <li className={styles.list} data-color="#0fbcf9">
-        <a href="">
-          <HiChatAlt2 size={24} />
-          <span className={styles.title}>Contato</span>
-        </a>
-      </li>
-      {/* <div className={styles.indicator}></div> */}
-    </ul>
-  </nav>
-)
+const navigation = [
+  { name: 'Home', path: '/', icon: <HiHome size={24} /> },
+  { name: 'Sobre', path: '/sobre', icon: <HiUserCircle size={24} /> },
+  { name: 'Projetos', path: '/projetos', icon: <HiFolderOpen size={24} /> },
+  { name: 'Contato', path: '/contato', icon: <HiChatAlt2 size={24} /> }
+]
+
+export const Navbar = () => {
+  const { asPath } = useRouter()
+
+  return (
+    <nav className={styles.navigation}>
+      <ul>
+        {navigation.map(navItem => (
+          <li
+            key={navItem.path}
+            className={`${styles.navItem} ${
+              asPath === navItem.path ? styles.active : ''
+            }`}
+          >
+            <Link href={navItem.path}>
+              <a>
+                {navItem.icon}
+                <span className={styles.tooltip}>{navItem.name}</span>
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
