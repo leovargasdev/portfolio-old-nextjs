@@ -13,8 +13,6 @@ export const Layout = ({ children }: LayoutProps) => (
 
       <Navbar />
     </header>
-    <div className={styles.content}>
-      <main className={styles.main}>{children}</main>
-    </div>
+    <main className={styles.content}>{children}</main>
   </div>
 )
