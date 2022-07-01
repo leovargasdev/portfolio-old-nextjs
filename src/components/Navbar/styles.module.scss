@@ -4,7 +4,7 @@
 
   border-radius: 12px;
   background: rgba(29, 29, 52, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--white);
 
   ul {
     list-style: none;
@@ -44,7 +44,6 @@
 
     svg {
       opacity: 0.6;
-      color: #94A1B2;
       margin: auto;
 
       transition: all 0.4s;
@@ -53,7 +52,7 @@
 
   &.active svg, &:hover svg {
     opacity: 1;
-    color: white;
+    color: var(--text-light);
   }
 
   &:hover .tooltip {
@@ -65,20 +64,23 @@
 
 .tooltip {
   position: absolute;
-  
   top: 0;
   left: 70px;
   margin: auto 0;
 
-  color: #94A1B2;
+  display: flex;
+  align-items: center;
+
   font-size: 0.875rem;
   letter-spacing: 0.3px;
+  color: var(--text-light);
   font-family: 'Poppins', sans-serif;
 
   bottom: 0;
-  height: 30px;
-  padding: 3px 16px 0;
-  background: #1A1A2E;
+  height: 36px;
+  padding: 0 16px;
+  background: var(--link);
+
   border-radius: 6px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   
@@ -93,7 +95,8 @@
     position: absolute;
     width: 12px;
     height: 12px;
-    background: #1A1A2E;
+    background: var(--link);
+
     left: -10px;
     top: 46%;
     transform: rotate(45deg) translateY(-50%);

@@ -5,10 +5,14 @@
 }
 
 :root {
-  --background: #f5f6fa;
+  --text: #94a1b2;
+  --text-light: #fffffe;
+  --text-dark: #72757e;
+  --background: #1A1A2E;
 
-  --primary: #373D4F;
-  --secondary: #9098AE;
+  --white: rgba(255, 255, 255, 0.1);
+
+  --link: #7f5af0;
 }
 
 body {
@@ -16,7 +20,7 @@ body {
 }
 
 body, button, textarea, input {
-  color: var(--primary);
+  color: var(--text);
   font: 400 1rem "Roboto", sans-serif;
 }
 
