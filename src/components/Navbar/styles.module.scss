@@ -79,7 +79,7 @@
   bottom: 0;
   height: 36px;
   padding: 0 16px;
-  background: var(--link);
+  background: var(--link-dark);
 
   border-radius: 6px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -95,7 +95,7 @@
     position: absolute;
     width: 12px;
     height: 12px;
-    background: var(--link);
+    background: var(--link-dark);
 
     left: -10px;
     top: 46%;
