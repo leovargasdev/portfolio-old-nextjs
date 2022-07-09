@@ -1,0 +1,40 @@
+.social {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+
+  margin-top: 16px;
+
+  svg {
+    opacity: 0.6;
+    width: 32px;
+    height: auto;
+
+    transition: all 0.4s;
+  }
+
+  a:hover svg {
+    opacity: 1;
+    transform: translateY(-6px);
+
+    path{
+      animation: svg-animation 2s ease alternate;
+    }
+  }
+
+  @keyframes svg-animation{
+    0% {
+      stroke-width: 0;
+      stroke-dasharray: 1 100;
+      fill: transparent;
+    }
+    25% {
+      stroke-width: 1;  
+    }
+    60%, 100% {
+      stroke-width: 0.3;
+      stroke-dasharray: 100 1;
+      fill: var(--link);  
+    }
+  }
+}
