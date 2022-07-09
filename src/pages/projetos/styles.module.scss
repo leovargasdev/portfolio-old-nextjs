@@ -70,26 +70,27 @@
   align-items: center;
   column-gap: 16px;
 
-  svg {
-    width: 24px;
-    height: 24px;
-    transition: all 0.2s;
+  // svg {
+  //   width: 24px;
+  //   height: 24px;
+  //   transition: all 0.2s;
 
-    path {
-      transition: all 0.2s;
-    }
+  //   path {
+  //     fill: var(--text);
+  //     transition: all 0.2s;
+  //   }
 
-    // Colocar a cor respectiva de cada stack
+  //   // Colocar a cor respectiva de cada stack
 
-    &:hover {
-      cursor: pointer;
-      transform: translateY(-8px);
+  //   &:hover {
+  //     cursor: pointer;
+  //     transform: translateY(-8px);
 
-      path {
-        fill: var(--green);
-      }
-    }
-  }
+  //     path {
+  //       fill: var(--green);
+  //     }
+  //   }
+  // }
 }
 
 .project__links {

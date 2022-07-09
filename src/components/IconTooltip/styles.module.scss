@@ -1,0 +1,75 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 24px;
+  height: 24px;
+
+  background: attr(data-color color);
+
+  svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.2s;
+
+    path {
+      fill: var(--text);
+      transition: all 0.2s;
+    }
+  }
+
+  &:hover {
+    svg {
+      transform: translateY(-8px);
+
+      path {
+        fill: var(--green);
+      }
+    }
+
+    .tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.tooltip {
+  position: absolute;
+  top: 34px;
+
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: var(--text-light);
+  font-family: var(--font-poppins);
+
+  padding: 2px 12px;
+  border-radius: 4px;
+  background: var(--green);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+  transform: translateY(10px);
+
+  // Triangulo
+  &::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--green);
+
+    top: -3px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    transform: rotate(45deg);
+    border-radius: 2px;
+  }
+}
