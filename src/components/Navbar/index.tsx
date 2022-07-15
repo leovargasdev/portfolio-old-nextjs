@@ -25,9 +25,11 @@ export const Navbar = () => {
             }`}
           >
             <Link href={navItem.path}>
-              <a>
+              <a className={styles.navItem__link}>
                 {navItem.icon}
                 <span className={styles.tooltip}>{navItem.name}</span>
+                {/* Texto exibido no mobile */}
+                <strong>{navItem.name}</strong>
               </a>
             </Link>
           </li>

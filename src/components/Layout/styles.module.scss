@@ -4,6 +4,10 @@
   background: linear-gradient(287.69deg, #16161A 1.02%, rgba(29, 29, 52, 0.94) 87.35%);
 
   display: flex;
+
+  @media(max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .header {
@@ -16,7 +20,7 @@
   padding: 24px 12px;
   background: var(--background);
 
-  strong {
+  > strong {
     font-size: 3rem;
     font-weight: 900;
     letter-spacing: -6px;
@@ -24,6 +28,19 @@
     font-family: var(--font-poppins);
     
     padding-right: 3px;
+  }
+
+  @media(max-width: 768px) {
+    flex-direction: row;
+    padding: 0;
+    height: 70px;
+    margin: 8px;
+    background: transparent;
+    border-radius: 12px;
+    
+    > strong {
+      display: none;
+    }
   }
 }
 
