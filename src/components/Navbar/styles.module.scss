@@ -31,6 +31,7 @@
 
   display: flex;
 
+  // linha divisória
   &::after {
     content: '';
     position: absolute;
@@ -62,6 +63,7 @@
   @media(max-width: 768px) {
     height: 64px;
 
+    // underline no rodapé do nome da rota
     &::after {
       top: 64px;
       background: transparent;

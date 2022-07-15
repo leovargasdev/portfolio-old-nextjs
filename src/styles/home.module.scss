@@ -5,6 +5,10 @@
 
   display: flex;
   align-items: center;
+
+  @media(max-width: 768px) {
+    padding-left: 0px;
+  }
 }
 
 .content {
@@ -29,45 +33,30 @@
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-}
 
-.social {
-  display: flex;
-  align-items: center;
-  column-gap: 16px;
-
-  margin-top: 16px;
-
-  svg {
-    opacity: 0.6;
-    width: 32px;
-    height: auto;
-
-    transition: all 0.4s;
-  }
-
-  a:hover svg {
-    opacity: 1;
-    transform: translateY(-6px);
-
-    path{
-      animation: svg-animation 2s ease alternate;
+  @media(max-width: 768px) {
+    width: 100%;
+    align-items: center;
+    row-gap: 12px;
+    
+    text-align: center;
+    
+    h1 {
+      max-width: 100%;
     }
   }
 
-  @keyframes svg-animation{
-    0% {
-      stroke-width: 0;
-      stroke-dasharray: 1 100;
-      fill: transparent;
+  @media(max-width: 600px) {
+    h1 {
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+      max-width: 300px;
     }
-    25% {
-      stroke-width: 1;  
-    }
-    60%, 100% {
-      stroke-width: 0.3;
-      stroke-dasharray: 100 1;
-      fill: var(--link);  
+
+    p {
+      font-size: 1rem;
+      line-height: 1.375rem;
+      max-width: 360px;
     }
   }
 }
@@ -89,6 +78,16 @@
     -webkit-background-clip: text;
     -webkit-text-stroke: 10px transparent;
   }
+
+  @media(max-width: 768px) {
+    text-align: center;
+
+    span {
+      font-size: 15vw;
+      line-height: 20vw;
+    }
+  }
+
 }
 
 .avatar {
@@ -98,4 +97,8 @@
   position: relative;
   width: 800px;
   height: clamp(60vh, 90vh, 800px);
+
+  @media(max-width: 768px) {
+    display: none;
+  }
 }

@@ -22,19 +22,28 @@
     }
   }
 
-  @keyframes svg-animation{
-    0% {
-      stroke-width: 0;
-      stroke-dasharray: 1 100;
-      fill: transparent;
+  @media(max-width: 600px) {
+    column-gap: 12px;
+    margin-top: 10px;
+
+    svg {
+      width: 24px;
     }
-    25% {
-      stroke-width: 1;  
-    }
-    60%, 100% {
-      stroke-width: 0.3;
-      stroke-dasharray: 100 1;
-      fill: var(--link);  
-    }
+  }
+}
+
+@keyframes svg-animation{
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+    fill: transparent;
+  }
+  25% {
+    stroke-width: 1;  
+  }
+  60%, 100% {
+    stroke-width: 0.3;
+    stroke-dasharray: 100 1;
+    fill: var(--link);  
   }
 }
